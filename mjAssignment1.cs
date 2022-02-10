@@ -8,4 +8,4 @@ int Edge = Convert.ToInt32(Console.ReadLine());
 double Area = 5.0 * Math.Pow(3, 0.5) * Math.Pow(Edge, 2);
 
 Console.WriteLine(Area);
-Console.ReadLine();
+Console.ReadKey();
