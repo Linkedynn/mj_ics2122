@@ -1,4 +1,4 @@
-//MJP1
+     //MJP1
 // MJ Ahmed
 // March 3, 2022
 List<string> MovieDetails = new List<string>();
@@ -9,11 +9,12 @@ MovieDescriptions.Add("Movie Length: ");
 MovieDescriptions.Add("Is It PG13?: ");
 MovieDescriptions.Add("Movie Release Date: ");
 MovieDescriptions.Add("Movie Rating : ");
+MovieDescriptions.Add("Movie Rating Percent: ");
 MovieDescriptions.Add("Movie Director: ");
 MovieDescriptions.Add("Movie Description: ");
 bool loop = true; // loop variable
 bool accessLoop = true;
-// No calculation atm
+
 
 while (loop == true){
 accessLoop = true;
@@ -37,9 +38,12 @@ Console.Write("Movie Release Date: ");
 string movieReleaseDate = Console.ReadLine();
 MovieDetails.Add(movieReleaseDate);
 
-Console.Write("Movie Rating: ");
+Console.Write("Movie Rating (Numbers Only out of 10): ");
 string movieRating = Console.ReadLine();
+double movieRatingPercent = (Convert.ToDouble(movieRating)) / 10 * 100;
+
 MovieDetails.Add(movieRating);
+MovieDetails.Add(Convert.ToString(movieRatingPercent));
 
 Console.Write("Movie Director: ");
 string movieDirector = Console.ReadLine();
@@ -83,7 +87,7 @@ if (showInput == "Yes")
        string access = Console.ReadLine();
        for (int i = 0; i < MovieDetails.Count ; i++)
        {
-              Console.WriteLine(Movies[Convert.ToInt32(access)][i]);
+              Console.WriteLine($@"{MovieDescriptions[i]}                                         " + Movies[Convert.ToInt32(access)][i]);
        };
        Console.WriteLine("Would you like to access any more?: ");
        string loopy = Console.ReadLine();
