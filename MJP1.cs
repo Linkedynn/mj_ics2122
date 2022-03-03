@@ -13,7 +13,7 @@ MovieDescriptions.Add("Movie Director: ");
 MovieDescriptions.Add("Movie Description: ");
 bool loop = true; // loop variable
 bool accessLoop = true;
-
+// No calculation atm
 
 while (loop == true){
 accessLoop = true;
