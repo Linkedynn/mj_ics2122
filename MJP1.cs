@@ -15,11 +15,15 @@ MovieDescriptions.Add("Movie Description: ");
 bool loop = true; // loop variable
 bool accessLoop = true;
 
+static String Menu (){
+  Console.Write("Would you like to access a movie or add one? [Add] [Access] [Exit]: ");
+  string key = Console.ReadLine();
+  return key;
+}
 
 while (loop == true){
 accessLoop = true;
-Console.Write("Would you like to access a movie or add one? [Add] [Access] [Exit]: ");
-string key = Console.ReadLine();
+string key = Menu();
 if (key == "Add")
 {
      Console.Write("Movie Name: ");
@@ -102,7 +106,7 @@ if (showInput == "Yes")
       
 }
 else if(key == "Exit"){
-       Environment.Exit(0);
+       loop = false;
 } else{
        Console.WriteLine("Please Enter A Valid Answer");
 }
