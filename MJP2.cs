@@ -14,7 +14,6 @@ namespace proj2{
                    products = products * Convert.ToInt32(number);
                }
 
-
             Console.Write(products); 
             Console.ReadKey();
 
